@@ -1,11 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
-import { graphql } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import { ComponentFactory } from "./componentFactory"
+import Layout from '../components/layout'
+import Image from '../components/image'
+import SEO from '../components/seo'
+import { ComponentFactory } from './componentFactory'
 
 const getNavSections = edges => {
   if (edges) {
@@ -56,6 +56,13 @@ export const query = graphql`
             component
             title
             subtitle
+            img {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             icon
             navSection
           }

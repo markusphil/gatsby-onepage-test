@@ -1,9 +1,9 @@
 ---
-component: "hero"
+component: 'hero'
 position: 1
-img: "berg"
-title: "Hallo von der deutschen Seite"
-subtitle: "Moin Servus Tach"
+img: ../mountain.jpg
+title: 'Hallo von der deutschen Seite'
+subtitle: 'Moin Servus Tach'
 ---
 
 ## No HTML used here

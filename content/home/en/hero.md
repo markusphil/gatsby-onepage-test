@@ -1,9 +1,9 @@
 ---
-component: "hero"
+component: 'hero'
 position: 1
-img: "mountain"
-title: "A very Important statement"
-subtitle: "Bli bla blub"
+img: ../mountain.jpg
+title: 'A very Important statement'
+subtitle: 'Bli bla blub'
 ---
 
 ## No HTML used here

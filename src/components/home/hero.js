@@ -1,14 +1,15 @@
-import React from "react"
+import React from 'react'
+import BackgroundImage from 'gatsby-background-image'
 
 export default function Hero({ node, navSections }) {
   return (
-    <div>
+    <BackgroundImage fluid={node.frontmatter.img.childImageSharp.fluid}>
       <nav>
         <ul>
           {navSections.map(n => {
             return (
               <li>
-                <a href={"#" + n}>{n}</a>
+                <a href={'#' + n}>{n}</a>
               </li>
             )
           })}
@@ -16,6 +17,6 @@ export default function Hero({ node, navSections }) {
       </nav>
       <h1>{node.frontmatter.title}</h1>
       <p>{node.frontmatter.subtitle}</p>
-    </div>
+    </BackgroundImage>
   )
 }
