@@ -22,14 +22,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
   result.data.allDirectory.edges.forEach(({ node }) => {
     // create home pages
-    if (node.relativeDirectory === "home")
+    if (node.relativeDirectory === 'home') {
+      const lang = node.relativePath.replace('home/', '')
       createPage({
-        path: node.relativePath.replace("home", ""),
+        path: lang === 'en' ? '/' : node.relativePath.replace('home', ''),
         component: homeTemplate,
         context: {
-          langpath: "/" + node.relativePath + "/",
-          lang: node.relativePath.replace("home/", ""),
+          langpath: '/' + node.relativePath + '/',
+          lang: lang,
         }, // additional data can be passed via context
       })
+    }
   })
 }
