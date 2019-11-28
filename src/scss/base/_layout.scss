@@ -1,0 +1,19 @@
+@include is-x-y;
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  @media #{break(xl)} {
+    width: 90%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -#{$s-s};
+}
+
+.section {
+  padding: $s-xxxl 0;
+}

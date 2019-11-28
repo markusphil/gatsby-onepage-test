@@ -1,0 +1,29 @@
+$font-title: 'Frank Ruhl Libre', serif;
+$font-main: 'Rajdhani', 'Arial', sans-serif;
+
+html {
+  font-family: $font-main;
+}
+
+.title-big {
+  font-family: $font-title;
+  font-size: 3rem;
+}
+
+.title {
+  font-family: $font-title;
+  font-size: 2rem;
+  line-height: 1.6rem;
+}
+
+.subtitle {
+  font-family: $font-main;
+  font-size: 1.5rem;
+  line-height: 1.2rem;
+}
+
+p {
+  font-family: $font-main;
+  font-size: 1rem;
+  line-height: 1.1rem;
+}

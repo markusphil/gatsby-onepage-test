@@ -1,0 +1,56 @@
+//z-Layers
+$z-layers: (
+  'default': 1,
+  'below': -1,
+);
+
+@function z($layer) {
+  @return map-get($z-layers, $layer);
+}
+
+//Breakpoints
+
+$breakpoints: (
+  'sm': '(max-width: 400px)',
+  'md': '(min-width: 401px) and (max-width: 800px)',
+  'lg': '(min-width: 801px) and (max-width: 1600px)',
+  'xl': '(min-width: 1601px)',
+);
+
+$breakpoints-up: (
+  sm: 0px,
+  md: 401px,
+  lg: 801px,
+  xl: 1601px,
+);
+
+@function break($size) {
+  @return map-get($breakpoints, $size);
+}
+
+@mixin bp-up($bp) {
+  $bp-value: map-get($breakpoints-up, $bp);
+  @media (min-width: $bp-value) {
+    @content;
+  }
+}
+
+// grid system
+$columns: 12;
+@mixin is-x-y {
+  @each $bp in map-keys($breakpoints) {
+    @for $i from 1 through $columns {
+      $calc-width: (100% * ($i/12));
+      $calc-space: (2 * $s-s);
+
+      .is-#{$bp}-#{$i} {
+        margin: 0 $s-s;
+        flex: 0 0 100%;
+
+        @include bp-up($bp) {
+          flex: 0 0 calc(#{$calc-width} - #{$calc-space});
+        }
+      }
+    }
+  }
+}
