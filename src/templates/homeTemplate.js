@@ -1,10 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+import Layout from '../components/base/layout'
+import SEO from '../components/base/seo'
 import { ComponentFactory } from './componentFactory'
 
 const getNavSections = edges => {
@@ -22,23 +20,15 @@ const getNavSections = edges => {
 export default ({ data, pageContext }) => {
   console.log(data)
   return (
-    <Layout>
-      <SEO title="Home" />
+    <Layout navSections={getNavSections(data.allMarkdownRemark.edges)}>
+      <SEO title="Home" lang="pageContext.lang" />
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <ComponentFactory key={node.id} node={node} />
+      ))}
       <div>
         <h4>{data.allMarkdownRemark.totalCount} Components found</h4>
         <h4>Language: {pageContext.lang}</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <ComponentFactory
-            key={node.id}
-            node={node}
-            navSections={getNavSections(data.allMarkdownRemark.edges)}
-          />
-        ))}
       </div>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   )
 }
