@@ -1,10 +1,11 @@
 ---
-component: "content"
+component: 'with-icon'
 position: 4
-icon: "brain svg"
-title: "Why PepperLime?"
+icon: '../language.svg'
+iconAlt: 'translation symbol'
+title: 'Why PepperLime?'
 isSwapped: false
-navSection: "USPs"
+navSection: 'USP'
 ---
 
 no we finaly use _Markdown_ that get's compiled to **HTML**!

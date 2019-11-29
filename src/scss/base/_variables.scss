@@ -28,3 +28,12 @@ $s-l: 1rem;
 $s-xl: 1.5rem;
 $s-xxl: 3rem;
 $s-xxxl: 6rem;
+
+//border-radius
+$r-s: 0.05rem;
+
+//border setup
+@mixin border {
+  border: 2px solid $brand-primary;
+  border-radius: $r-s;
+}

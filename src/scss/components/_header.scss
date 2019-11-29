@@ -24,8 +24,9 @@
 .navlist {
   @extend .is-sm-5;
   list-style: none;
-  padding: 0;
+  padding: 0 $s-s;
   display: flex;
+  justify-content: flex-end;
 }
 
 .navitem {
@@ -34,8 +35,8 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    &:not(:last-child) {
-      margin-right: $s-s;
-    }
+  }
+  &:not(:last-child) {
+    margin-right: $s-s;
   }
 }

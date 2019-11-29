@@ -53,7 +53,9 @@ export const query = graphql`
                 }
               }
             }
-            icon
+            icon {
+              publicURL
+            }
             navSection
           }
           html

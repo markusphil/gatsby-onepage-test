@@ -1,0 +1,48 @@
+.content {
+  padding: 4rem;
+
+  &.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  a {
+    @extend button;
+    margin: 3rem auto;
+  }
+
+  &.contrast {
+    @extend .container;
+    background-color: $bg-invert;
+    color: $text-invert;
+    padding: 0;
+  }
+}
+
+.text-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: $s-m;
+  @include bp-up(md) {
+    flex: 1 1 calc(60% - #{$s-m});
+  }
+}
+
+.icon-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $brand-secondary;
+  padding: $s-xxl $s-xl;
+  @include bp-up(md) {
+    flex: 1 1 calc(30% - #{$s-m});
+  }
+}
+
+.content-icon {
+  max-width: 50%;
+}

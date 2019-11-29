@@ -1,16 +1,20 @@
 import React from 'react'
 
-export default function Content({ node }) {
+export default function IconContent({ node }) {
   return (
     <section id={node.frontmatter.navSection} className="section">
-      <div className="container">
+      <div className="content contrast">
         <div className="row">
-          <div className="col is-md-5">
+          <div className="text-col">
             <h3>{node.frontmatter.title}</h3>
             <div dangerouslySetInnerHTML={{ __html: node.html }} />
           </div>
-          <div className="col is-md-7">
-            <p>{node.frontmatter.icon}</p>
+          <div className="icon-col">
+            <img
+              className="content-icon"
+              src={node.frontmatter.icon.publicURL}
+              alt={node.frontmatter.iconAlt}
+            />
           </div>
         </div>
       </div>

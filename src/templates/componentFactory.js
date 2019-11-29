@@ -1,13 +1,16 @@
 import React from 'react'
 import Hero from '../components/home/hero'
-import Content from '../components/home/content'
+import IconContent from '../components/home/IconContent'
+import CenteredContent from '../components/home/CenteredContent'
 
 export function ComponentFactory({ node }) {
   switch (node.frontmatter.component) {
     case 'hero':
       return <Hero node={node} />
-    case 'content':
-      return <Content node={node} />
+    case 'with-icon':
+      return <IconContent node={node} />
+    case 'centered':
+      return <CenteredContent node={node} />
     default:
       return (
         <div>
