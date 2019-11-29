@@ -1,0 +1,11 @@
+.hero {
+  padding: 12rem 4rem 10rem;
+  position: relative;
+  .shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    fill: $bg-main;
+  }
+}

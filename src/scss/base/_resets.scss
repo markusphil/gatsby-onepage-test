@@ -1,7 +1,15 @@
 body {
   margin: 0;
+  background-color: $bg-main;
 }
 
 a {
+  @include trans-1;
+
   text-decoration: none;
+  color: $link;
+
+  &:hover {
+    color: $link-hover;
+  }
 }

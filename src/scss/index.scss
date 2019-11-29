@@ -1,9 +1,13 @@
 @charset 'utf-8';
 
-@import 'config/variables';
-@import 'config/config';
-@import 'config/mixins';
-
+@import 'base/variables';
+@import 'base/config';
+@import 'base/fonts';
+@import 'base/animations';
 @import 'base/resets';
 @import 'base/layout';
-@import 'base/fonts';
+
+@import 'components/header';
+@import 'components/hero';
+@import 'components/content';
+@import 'components/footer';
