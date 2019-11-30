@@ -4,13 +4,18 @@ import { graphql } from 'gatsby'
 import Layout from '../components/base/layout'
 import SEO from '../components/base/seo'
 import { ComponentFactory } from './componentFactory'
+import { idFromName } from '../utility/helpers'
 
 const getNavSections = edges => {
   if (edges) {
     let navSections = []
     edges.forEach(({ node }) => {
       let nav = node.frontmatter.navSection
-      if (nav) navSections.push(nav)
+      if (nav)
+        navSections.push({
+          name: nav,
+          id: idFromName(nav),
+        })
     })
     return navSections
   }
@@ -18,14 +23,14 @@ const getNavSections = edges => {
 }
 
 export default ({ data, pageContext }) => {
-  console.log(data)
   return (
     <Layout navSections={getNavSections(data.allMarkdownRemark.edges)}>
       <SEO title="Home" lang="pageContext.lang" />
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <ComponentFactory key={node.id} node={node} />
-      ))}
-      <div>
+      {data.allMarkdownRemark.edges.map(({ node }) => {
+        node.frontmatter.navId = idFromName(node.frontmatter.navSection)
+        return <ComponentFactory key={node.id} node={node} />
+      })}
+      <div className="log">
         <h4>{data.allMarkdownRemark.totalCount} Components found</h4>
         <h4>Language: {pageContext.lang}</h4>
       </div>

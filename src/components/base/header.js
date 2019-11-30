@@ -6,7 +6,7 @@ const Header = ({ navSections }) => (
     <nav className="navbar">
       <div className="logo">
         <Link to="/">
-          <h1 className="title">PepperLimeLogo</h1>
+          <h1 className="title">Your Logo</h1>
         </Link>
       </div>
       {navSections && navSections.length > 0 && (
@@ -14,7 +14,7 @@ const Header = ({ navSections }) => (
           {navSections.map(n => {
             return (
               <li className="navitem">
-                <a href={'#' + n}>{n}</a>
+                <a href={'#' + n.id}>{n.name}</a>
               </li>
             )
           })}

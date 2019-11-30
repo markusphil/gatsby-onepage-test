@@ -3,7 +3,7 @@ component: 'with-icon'
 position: 4
 icon: '../language.svg'
 iconAlt: 'translation symbol'
-title: 'Why PepperLime?'
+title: 'Why Us?'
 isSwapped: false
 navSection: 'USP'
 ---

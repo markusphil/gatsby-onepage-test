@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function IconContent({ node }) {
   return (
-    <section id={node.frontmatter.navSection} className="section">
+    <section id={node.frontmatter.navId} className="section">
       <div className="content contrast">
         <div className="row">
           <div className="text-col">

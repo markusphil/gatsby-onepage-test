@@ -19,3 +19,13 @@
 .section {
   margin-top: $s-xxxl;
 }
+
+.log {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: $brand-primary;
+
+  font-size: 0.8rem;
+}

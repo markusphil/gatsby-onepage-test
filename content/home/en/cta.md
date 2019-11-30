@@ -4,7 +4,7 @@ position: 8
 navSection: 'CTA'
 ---
 
-### Work together?
+## Work together?
 
 Let's talk about how we could improve your project!
 

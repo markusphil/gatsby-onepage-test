@@ -21,7 +21,12 @@ a {
 button {
   @extend p;
   @include border;
+  @include trans-1;
   color: $brand-primary;
   padding: 0.5rem 2rem;
   white-space: nowrap;
+  &:hover {
+    background-color: $brand-primary;
+    color: $black;
+  }
 }
