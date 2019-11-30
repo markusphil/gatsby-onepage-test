@@ -1,4 +1,4 @@
-/en  /en/:splat   302
-/de  /de/:splat   302
+/en/*  /en/:splat   302
+/de/*  /de/:splat   302
 /*  /de/:splat   302  Language=de
 /*  /en/:splat   302
