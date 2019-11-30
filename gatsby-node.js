@@ -25,7 +25,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     if (node.relativeDirectory === 'home') {
       const lang = node.relativePath.replace('home/', '')
       createPage({
-        path: lang === 'en' ? '/' : node.relativePath.replace('home', ''),
+        path: node.relativePath.replace('home', ''),
         component: homeTemplate,
         context: {
           langpath: '/' + node.relativePath + '/',
