@@ -18,7 +18,7 @@
     "gatsby-transformer-remark": "^2.6.37",
     "gatsby-transformer-sharp": "^2.3.3",
     "intersection-observer": "^0.7.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "pngquant-bin": "^5.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
